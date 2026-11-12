@@ -17,16 +17,24 @@ Omarchy theme switch
 
 ## Install
 
-Requirements: Omarchy, Google Chrome, Python 3.11+.
+Requirements: Omarchy, Google Chrome, Python 3.11+ (all included in Omarchy except Chrome).
 
 ```bash
-git clone <this repo> && cd <this repo>
-./install.sh
+git clone https://github.com/Maclogger/monkeytype-themeswitcher ~/monkeytype-themeswitcher && ~/monkeytype-themeswitcher/install.sh
 ```
 
-Then open `chrome://extensions`, turn on **Developer mode**, click **Load unpacked**, and pick the `extension/` folder.
+The script registers the helper with Chrome, copies the extension's path to your clipboard, and opens `chrome://extensions`. There:
 
-`install.sh` writes the host manifest to `~/.config/google-chrome/NativeMessagingHosts/`. It points at the script in this folder, so re-run it if you move the folder.
+1. Turn on **Developer mode** (top right).
+2. Click **Load unpacked**, press `Ctrl+L`, paste the path, and confirm.
+
+That's it. The mapping in `config.json` works out of the box.
+
+Chrome only remembers the unpacked extension on this machine, so step 2 is needed once per machine. Google Chrome can't load extensions from the command line, so the script can't do it for you.
+
+- `install.sh` is safe to re-run. Re-run it if you move the folder, because Chrome stores the helper's full path.
+- `./install.sh --uninstall` removes the registration. Remove the extension itself in `chrome://extensions`.
+- Updating: `git pull`, then click the reload icon on the extension card (this also restarts the helper). Changes to `config.json` alone apply on the next theme switch.
 
 ## Configure
 
