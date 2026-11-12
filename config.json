@@ -1,0 +1,29 @@
+{
+  "default": "auto",
+  "themes": {
+    "catppuccin": "catppuccin",
+    "catppuccin-latte": "iceberg_light",
+    "ethereal": "iceberg_dark",
+    "everforest": "viridescent",
+    "flexoki-light": "paper",
+    "gruvbox": "gruvbox_dark",
+    "hackerman": "hammerhead",
+    "jade-horse": "terror_below",
+    "kanagawa": "repose_dark",
+    "last-horizon": "vesper",
+    "lumon": "modern_dolch",
+    "lupine": "soaring_skies",
+    "matte-black": "incognito",
+    "miasma": "earthsong",
+    "nord": "nord",
+    "osaka-jade": "solarized_osaka",
+    "retro-82": "ryujinscales",
+    "ristretto": "sunset",
+    "rose-pine": "rose_pine_dawn",
+    "solitude": "midnight",
+    "starship": "tron_orange",
+    "tokyo-night": "auto",
+    "vantablack": "arch",
+    "white": "modern_ink"
+  }
+}

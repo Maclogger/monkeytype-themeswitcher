@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Omarchy → Monkeytype theme sync",
+  "version": "0.1.0",
+  "description": "Switches the Monkeytype theme to match the current Omarchy theme, live.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApjt52CRex2SrEyrVyiJtJuqC5141liy6ysJLn09yCmxZotNEMVoJEyhfniU78zE/nOP9MVHAxGt6BRrGYxBMZK+mFalyj4DIYrBHOg1Xi01gE0IOLVopoid6JSHL3Dt9yqMNp5tmHOly55ZVpWvJkx7l8cMl/Q4gXF4idr+Q0fJQpK8UfJsLUmMQuKTc+pGVjisjHSF6X72CH5mHnA7vkHmrBPkhW7B07r4k/9Jl34cpjqyufujLUMP4tnNIxQTGw+gso52gGhwykZQu6feJrlyX1rF3l5CMwU/5hECUUvsvsc8FLMciOswe7zgtoV+aXZAwqhr9znqbi5XKoRdBSQIDAQAB",
+  "permissions": ["nativeMessaging", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://monkeytype.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
